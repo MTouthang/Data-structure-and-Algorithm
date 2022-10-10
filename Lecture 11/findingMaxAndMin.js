@@ -59,3 +59,17 @@ let end = arr.length;
 // function or method calling --
 let result = findMaxandMin(arr, start, end);
 console.log(result);
+
+// output --
+/*
+PS E:\DSA\Data Structure and algorithm\Lecture 11> node .\findingMaxAndMin.js
+minMax1 - 20,39
+minMax2 - 45,45
+minMax1 - 20,45
+minMax2 - 21,65
+minMax1 - 44,89
+minMax2 - ,92
+minMax1 - 20,65
+minMax2 - ,92
+[ undefined, 92 ]
+*/
