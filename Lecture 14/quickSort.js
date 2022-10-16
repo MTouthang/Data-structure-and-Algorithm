@@ -32,6 +32,7 @@ function quickSort(arr, p, q) {
     // 1. Divide -
     // function for the partition method
     let mid = partition(arr, p, q);
+    
 
     // recusive function call for the left subtree
     quickSort(arr, p, mid - 1);
