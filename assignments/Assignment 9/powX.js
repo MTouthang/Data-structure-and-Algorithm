@@ -15,35 +15,36 @@
 // recursive function with divide conquer
 
 // defining recursive function --
-function findPower(a, n) {
+function findPower(x, n) {
   // small problem --
-  if (n == -1) {
-    // check for negative power
-    return 1 / a;
-  } else if (n == 1) {
-    // check for non-negative power
-    return a;
-  } else if (n == 0) {
+  if (n == 0) {
     return 1;
+  } else if (n < 0) {
+    // check for non-negative power
+    x = 1 / x;
+    n = -n;
+    return findPower(x, n);
+  } else if (n == 1) {
+    return x;
   } else {
     // big problem
     // 1.divide --
     let mid = Math.floor(n / 2);
 
     // 2. conquer --
-    var b = findPower(a, mid);
+    var b = findPower(x, mid);
   }
   //3. combine
   let result = b * b;
   if (n % 2 == 0) {
     return result;
   }
-  return result * 2;
+  return result * x;
 }
 
 // // Driver code --
 const x = 2;
-const n = 10;
+const n = -2;
 
 // function calling
 const result = findPower(x, n);
