@@ -6,7 +6,10 @@
 // method definition
 function findPower(a, n) {
   // small problem --
-  if (n == 1) {
+
+  if (n == -1) {
+    return 1 / a;
+  } else if (n == 1) {
     return a;
   } else if (n == 0) {
     return 1;
@@ -16,7 +19,7 @@ function findPower(a, n) {
     let mid = Math.floor(n / 2);
 
     // 2. conquer --
-    b = findPower(a, mid);
+    var b = findPower(a, mid);
   }
   //3. combine
   let result = b * b;
@@ -28,7 +31,7 @@ function findPower(a, n) {
 
 // Driver code --
 const a = 2;
-const n = 16;
+const n = 10;
 
 // function calling
 const result = findPower(a, n);
