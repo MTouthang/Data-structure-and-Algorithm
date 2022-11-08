@@ -9,6 +9,7 @@ function DivideTwoIntegers(dividend, divisor) {
 
   while (divid >= div) {
     var shift = 0;
+
     // left shift
     while (divid >= div << shift) {
       shift += 1;
