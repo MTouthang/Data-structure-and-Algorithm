@@ -1,8 +1,10 @@
 /**
  * Binary search algorithm --
+ *  - should be in sorted order (can be ascending or descending)
+ *
  */
 
-// with recursion approach
+// with iterative approach
 function binarySearch(arr, item, i, j) {
   while (i <= j) {
     let mid = Math.floor(i + (j - 1) / 2); // or (i+j)/2
